@@ -1,0 +1,14 @@
+name: Lint Pull Request
+
+on:
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+
+jobs:
+  lint-pr:
+    uses: PlaidypusDev/github-actions/.github/workflows/conventional-commit-lint-pr.yml@v1.0.0
+    with:
+      jira_key: OV
